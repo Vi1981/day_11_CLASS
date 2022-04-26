@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Day/month/year</title>
+</head>
+<body>
+<p id="setDate">Change to String</p>
+
+    <script>
+        class Display{
+            constructor(day,month,year){
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+            getDay(){
+                return this.day;
+            }
+            getMonth(){
+                return this.month;
+            }
+            getYear(){
+                return this.year;
+            }
+            setDay(newDay){
+                return this.day = newDay;
+            }
+            setMonth(newMonth){
+                return this.month = newMonth;
+            }
+            setYear(newYear){
+                return this.year = newYear;
+            }
+        }
+        let date = new Display(2,4,1981);
+        document.write(date.getDay() + " /" + date.getMonth() + "/" +date.getYear()+"<br/>");
+        date.setDay(26);
+        date.setMonth(4);
+        date.setYear(2022);
+        document.write(date.getDay() + " /" + date.getMonth() + "/" +date.getYear());
+
+
+
+let setString = new Display(1,5,2022);
+let text = setString.getDay() + " /" + setString.getMonth() + "/" +setString.getYear();
+// console.log(typeof text)
+console.log(typeof text.toString());
+
+document.getElementById("setDate").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Temperature</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(tempC){
+                this.tempC = tempC
+            }
+            changeToF(){
+                return (this.tempC*1.8)+32;
+            }
+            changeToK(){
+                return this.tempC+273.15;
+            }
+        }
+        let inputTemp=parseInt(prompt("Input Temperature C"));
+        let result = new Temperature(inputTemp);
+        if (inputTemp > -273) {
+            alert("F temperature is " + result.changeToF());
+            alert("K temperature is " + result.changeToK());
+        }else {
+            alert("Pls Input Temperature C bigger than -273");
+        }
+    </script>
+</body>
+</html>

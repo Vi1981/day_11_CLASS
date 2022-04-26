@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam&Eva eat Apples</title>
+</head>
+
+<body>
+    <script>
+        class Human {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            isMale() {
+                return this.gender;
+            }
+            setGender(inputGender) {
+                if (OR(inputGender = "male"), (inputGender = "female"), true, false) {
+                    return this.gender;
+                } else {
+                    alert("Gender is not valid")
+                }
+            }
+            checkApple(Apple) {
+                return this.weight = Apple;
+            }
+            eatApple(ate) {
+                if ((getWeight() > 0) && (ate < getWeight())) {
+                
+                   ate.decreaseWeight(ate);
+                   setWeight(getWeight(ate)+ate);
+                }
+            }
+            sayHuman() {
+                return alert("How much have you had Apple?");
+            }
+            getName() {
+                return this.name;
+            }
+            setName(newName) {
+                return this.name = newName;
+            }
+            getWeightH() {
+                return this.weight;
+            }
+            setWeight(newWeight) {
+                return this.weight = newWeight;
+            }
+        }
+        class Apple {
+            constructor(heavy) {
+                this.heavy = 10;
+            }
+            decreaseWeight(ate) {
+                if (this.heavy > 0) {
+                    this.heavy-ate;
+                }
+            }
+            isEmpty() {
+                return this.heavy == 0;
+            }
+            getWeight() {
+                return this.heavy;
+            }
+            setWeight(app){
+                this.heavy==app;
+            }
+        }
+        let person = new Human("ABC", "male", 30);
+        // person.setGender();
+       let tao = new Apple();
+       person.sayHuman();
+       document.write(person.eatApple(tao));
+
+
+    </script>
+</body>
+
+</html>
