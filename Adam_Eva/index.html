@@ -16,28 +16,21 @@
                 this.gender = gender;
                 this.weight = weight;
             }
-            isMale() {
-                return this.gender;
+            setGender(gender) {
+                this.gender = gender;
             }
-            setGender(inputGender) {
-                if (OR(inputGender = "male"), (inputGender = "female"), true, false) {
-                    return this.gender;
-                } else {
-                    alert("Gender is not valid")
+
+            checkApple(apple) {
+                return (!apple.isEmpty());
+            }
+            eatApple(apple) {
+                if (this.checkApple(apple)) {
+                    apple.decreaseWeight();
+                    this.weight++;
                 }
             }
-            checkApple(Apple) {
-                return this.weight = Apple;
-            }
-            eatApple(ate) {
-                if ((getWeight() > 0) && (ate < getWeight())) {
-                
-                   ate.decreaseWeight(ate);
-                   setWeight(getWeight(ate)+ate);
-                }
-            }
-            sayHuman() {
-                return alert("How much have you had Apple?");
+            sayHuman(something) {
+                return alert(something);
             }
             getName() {
                 return this.name;
@@ -48,35 +41,47 @@
             getWeightH() {
                 return this.weight;
             }
-            setWeight(newWeight) {
-                return this.weight = newWeight;
+            setWeightH(newWeight) {
+                this.weight = newWeight;
             }
         }
         class Apple {
-            constructor(heavy) {
+            constructor() {
                 this.heavy = 10;
             }
-            decreaseWeight(ate) {
+            decreaseWeight() {
                 if (this.heavy > 0) {
-                    this.heavy-ate;
+                    this.heavy--
                 }
             }
+
             isEmpty() {
                 return this.heavy == 0;
             }
             getWeight() {
                 return this.heavy;
             }
-            setWeight(app){
-                this.heavy==app;
-            }
-        }
-        let person = new Human("ABC", "male", 30);
-        // person.setGender();
-       let tao = new Apple();
-       person.sayHuman();
-       document.write(person.eatApple(tao));
 
+        }
+        alert("Pick Apple!");
+        let apple = new Apple();
+        let adam = new Human("Peter", "male", 70);
+        let eva = new Human("Mary", "female", 50);
+        adam.sayHuman("I am " + adam.getName());
+        eva.sayHuman("I am " + eva.getName());
+
+        while (!apple.isEmpty()) {
+            alert(adam.getName() + " is eating apple!");
+            adam.eatApple(apple);
+            alert(adam.getName() + " 's weight after eating apple is " + adam.getWeightH());
+
+            alert(eva.getName() + " is eating apple!");
+            eva.eatApple(apple);
+            alert(eva.getName() + " 's weight after eating apple is " + eva.getWeightH());
+
+            alert("Remaining weight of Apple is " + apple.getWeight());
+        }
+        alert("Finish Eating");
 
     </script>
 </body>

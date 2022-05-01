@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Button & Electric Lamp</title>
+</head>
+
+<body>
+    <script>
+        class ElectricLamp {
+            constructor() {
+                this.status = "OFF";
+            }
+            turnOff() {
+                this.status = "OFF";
+                alert("Lamp is " + this.status);
+            }
+            turnOn() {
+                this.status = "ON";
+                alert("Lamp is " + this.status);
+            }
+        }
+
+
+        class Switch {
+            constructor() {
+                this.status = "OFF"
+            }
+            connectToLamp(lamp) {
+                this.lamp = lamp;
+            }
+
+            switchOff() {
+                return this.lamp.turnOff();
+            }
+            switchOn() {
+                return this.lamp.turnOn();
+            }
+        }
+
+        let begin = new Switch();
+        let lamp = new ElectricLamp();
+
+        begin.connectToLamp(lamp);
+        for (let i = 0; i < 10; i++) {
+            alert("Switch " + (i+1) + " times");
+            begin.switchOn();
+            begin.switchOff();
+        }
+
+    </script>
+</body>
+
+</html>
